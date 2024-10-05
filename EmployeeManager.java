@@ -1,4 +1,3 @@
-//File Name EmployeeManager.java
 
 import java.io.*;
 import java.util.*;
@@ -12,8 +11,8 @@ public class EmployeeManager {
                 BufferedReader r = new BufferedReader(
                         new InputStreamReader(
                                 new FileInputStream("employees.txt")));
-                String l = r.readLine();
-                String e[] = l.split(",");
+                //String l = r.readLine();
+                String e[] = r.readLine().split(",");
                 for (String emp : e) {
                     System.out.println(emp);
                 }
@@ -26,11 +25,11 @@ public class EmployeeManager {
                 BufferedReader r = new BufferedReader(
                         new InputStreamReader(
                                 new FileInputStream("employees.txt")));
-                String l = r.readLine();
-                System.out.println(l);
-                String e[] = l.split(",");
-                Random rand = new Random();
-                int idx = rand.nextInt(e.length);
+                //String l = r.readLine();
+                System.out.println(r.readLine());
+                String e[] = r.readLine().split(",");
+               // Random rand = new Random();
+                int idx = new Random().nextInt(e.length);
                 System.out.println(e[idx]);
             } catch (Exception e) {
             }
@@ -52,8 +51,8 @@ public class EmployeeManager {
                 BufferedReader r = new BufferedReader(
                         new InputStreamReader(
                                 new FileInputStream("employees.txt")));
-                String l = r.readLine();
-                String e[] = l.split(",");
+                //String l = r.readLine();
+                String e[] = r.readLine().split(",");
                 boolean found = false;
                 String s = args[0].substring(1);
                 for (int i = 0; i < e.length && !found; i++) {
@@ -71,8 +70,8 @@ public class EmployeeManager {
                 BufferedReader r = new BufferedReader(
                         new InputStreamReader(
                                 new FileInputStream("employees.txt")));
-                String l = r.readLine();
-                char[] chars = l.toCharArray();
+                //String l = r.readLine();
+                char[] chars = r.readLine().toCharArray();
                 boolean inWord = false;
                 int count = 0;
                 for (char c : chars) {
@@ -95,8 +94,8 @@ public class EmployeeManager {
                 BufferedReader r = new BufferedReader(
                         new InputStreamReader(
                                 new FileInputStream("employees.txt")));
-                String l = r.readLine();
-                String e[] = l.split(",");
+                //String l = r.readLine();
+                String e[] = r.readLine().split(",");
                 String n = args[0].substring(1);
                 for (int i = 0; i < e.length; i++) {
                     if (e[i].equals(n)) {
@@ -116,8 +115,8 @@ public class EmployeeManager {
                 BufferedReader r = new BufferedReader(
                         new InputStreamReader(
                                 new FileInputStream("employees.txt")));
-                String l = r.readLine();
-                String e[] = l.split(",");
+                //String l = r.readLine();
+                String e[] = r.readLine().split(",");
                 String n = args[0].substring(1);
                 List<String> list = new ArrayList<>(Arrays.asList(e));
                 list.remove(n);
